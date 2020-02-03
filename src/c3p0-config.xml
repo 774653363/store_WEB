@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- 命名的配置 -->
+	<named-config name="EK">
+		<!-- 链接数据库的4项参数 -->
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/store_db?characterEncoding=UTF-8</property>
+		<property name="user">root</property>
+		<property name="password">admin</property>
+		<!-- 如果池中数据连接不够时一次增长多少个 -->
+		<property name="acquireIncrement">5</property>
+		<!-- 初始化连接数 -->
+		<property name="initialPoolSize">20</property>
+		<!-- 最小连接数 -->
+		<property name="minPoolSize">10</property>
+		<!-- 最大连接数 -->
+		<property name="maxPoolSize">40</property>
+		<!-- JDBC的标准参数,用以控制数据源内加载的ProparedStatements数量 -->
+		<property name="maxStatements">0</property>
+		<!-- 连接池内单个连接所拥有的的最大缓存statements数 -->
+		<property name="maxStatementsPerConnection">5</property>
+	</named-config>
+</c3p0-config>
