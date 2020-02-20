@@ -64,6 +64,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 				InputStream is = item.getInputStream();
 				//获取文件上传路径
 				String path = req.getServletContext().getRealPath("/products/upload");
+				System.out.println(path);
 				//获取输出流
 				OutputStream os = new FileOutputStream(path+"/"+fileName);
 				//复制文件
